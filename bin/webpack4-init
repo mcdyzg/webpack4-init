@@ -1,0 +1,217 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander');
+
+
+
+
+
+
+
+// program
+// .version('0.0.1')
+// .command('init')
+// .arguments('<cmd> [env]')
+// .action(function (cmd, env) {
+//     console.log(cmd,env,1111)
+//    cmdValue = cmd;
+//    envValue = env;
+// });
+//
+// program.parse(process.argv);
+//
+// if (typeof cmdValue === 'undefined') {
+//  console.error('no command given!');
+//  process.exit(1);
+// }
+// console.log('command:', cmdValue);
+// console.log('environment:', envValue || "no environment given");
+
+// output:
+// aaa [1,2,3] 1111
+// command: aaa
+// environment: [1,2,3]
+
+
+
+
+
+
+
+
+
+
+
+
+
+// program
+// .version('0.0.1')
+// .command('init <cmd1>')
+// .action(function (cmd1) {
+//     cmd1value = cmd1
+//     console.log(cmd1,'get arguments!')
+// });
+// program.parse(process.argv);
+// console.log('command:', cmd1value);
+//
+// // output:
+// // webpack4-init init bbb
+// // bbb get arguments!
+// // command: bbb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// program
+// .version('0.0.1')
+// .command('init <cmd1>')
+// .arguments('<cmd2> [env]')
+// .action(function (cmd1,cmd2,env) {
+//     cmd1value = cmd1
+//     console.log(cmd1,cmd2,env,'get arguments!')
+// });
+// program.parse(process.argv);
+// console.log('command:', cmd1value);
+//
+// // output:
+// // webpack4-init init aaa bbb [1,2,3]
+// // aaa bbb [1,2,3] get arguments!
+// // command: aaa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// program
+// .version('0.0.1')
+// .command('init')
+// .action(function (cmd1,cmd2) {
+//     cmd1value = cmd1
+//     console.log(cmd1,cmd2,'get arguments!')
+// });
+// program.parse(process.argv);
+// console.log('command:', cmd1value);
+//
+// // output:
+// // webpack4-init init aaa bbb [1,2,3]
+// // aaa bbb get arguments!
+// // command: aaa
+
+
+
+
+
+
+
+
+
+
+
+
+// program
+// .version('0.0.1')
+// // .command('')  如果不写command或者写'',那么不会走到action里，但end会走到
+// .action(function () {
+//     console.log('get commond!')
+// });
+// program.parse(process.argv);
+// console.log('end')
+//
+// // output:
+// // webpack4-init
+// // end
+
+
+
+
+
+
+
+
+
+
+
+
+
+// program
+// .version('0.0.1')
+// .command('init')   // 如果不写command或者写'',那么不会走到action里，但end会走到
+// .action(function () {
+//     console.log('get commond!')
+// });
+// program.parse(process.argv);
+//
+// // 如果参数数量等于2，说明直接调用webpack4-init没加其他参数
+// if(process.argv.length === 2) {
+//     console.log('go')
+// }
+// console.log('end')
+//
+// // output:
+// // webpack4-init init 111
+// // get commond!
+// // end
+//
+// // output
+// // webpack4-init
+// // go
+// // end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 上面都是demo，现在可以开始写了
+program
+.version('0.0.1')
+.command('init')   // 如果不写command或者写'',那么不会走到action里，但end会走到
+.description('初始化项目')
+.action(function () {
+    // 初始化项目
+    require('../lib/init')()
+});
+program.parse(process.argv);
+
+
+
+// 如果参数数量等于2，说明直接调用webpack4-init没加其他参数
+if(process.argv.length === 2) {
+    // 初始化项目
+    require('../lib/init')()
+}

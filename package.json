@@ -1,30 +1,26 @@
 {
-    "name": "webpack4-init",
-    "version": "1.1.0",
-    "description": "wepback4 start-kit for react",
-    "bin": {
-        "webpack4-init": "bin/webpack4-init"
-    },
-    "directories": {
-        "lib": "lib"
-    },
-    "dependencies": {
-        "commander": "^2.15.1",
-        "download-git-repo": "^1.0.2",
-        "inquirer": "^5.1.0"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "start": "node bin/webpack4-init",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "webpack4",
-        "react",
-        "redux",
-        "antd"
-    ],
-    "repository": "https://github.com/mcdyzg/webpack4-init",
-    "author": "mcdyzg",
-    "license": "ISC"
+	"name": "webpack4-init",
+	"version": "1.1.1",
+	"description": "wepback4 start-kit for react",
+	"bin": {
+		"webpack4-init": "bin/webpack4-init"
+	},
+	"directories": {
+		"lib": "lib"
+	},
+	"dependencies": {
+		"commander": "^2.15.1",
+		"download-git-repo": "^1.0.2",
+		"inquirer": "^5.1.0",
+		"ora": "^2.0.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"start": "node bin/webpack4-init",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": ["webpack4", "react", "redux", "antd"],
+	"repository": "https://github.com/mcdyzg/webpack4-init",
+	"author": "mcdyzg",
+	"license": "ISC"
 }

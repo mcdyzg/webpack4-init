@@ -21,6 +21,13 @@
 
     webpack4-init
 
+## Options
+
+*   **preset(p)** : create from github repository
+
+    eg: webpack4-init create [projectName] --preset mcdyzg/test
+    eg: webpack4-init create [projectName] -p mcdyzg/test
+
 ## Depend on
 
 *   commander.js
